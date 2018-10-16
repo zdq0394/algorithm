@@ -1,6 +1,4 @@
-package main
-
-import "fmt"
+package hashtable
 
 func readString(a string, h map[string]int) {
 	begin := 0
@@ -28,9 +26,4 @@ func uncommonFromSentences(a string, b string) []string {
 		}
 	}
 	return result
-}
-func main() {
-	a := "this apple is sweet"
-	b := "this apple is sour"
-	fmt.Println(uncommonFromSentences(a, b))
 }
