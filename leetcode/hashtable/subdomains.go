@@ -1,4 +1,4 @@
-package main
+package hashtable
 
 import (
 	"fmt"
@@ -15,9 +15,10 @@ func subDomains(domain string) []string {
 	result = append(result, domain)
 	return result
 }
-func subdomainVisits(cpdomains []string) []string {
+
+func subdomainVisitsAsMap(cpdomains []string) map[string]int {
 	if cpdomains == nil || len(cpdomains) == 0 {
-		return []string{}
+		return map[string]int{}
 	}
 	result := make(map[string]int, 0)
 	for _, visitsDomain := range cpdomains {
@@ -38,13 +39,13 @@ func subdomainVisits(cpdomains []string) []string {
 			}
 		}
 	}
+	return result
+}
+
+func subdomainVisits(result map[string]int) []string {
 	ret := make([]string, 0)
 	for k, v := range result {
 		ret = append(ret, fmt.Sprintf("%d %s", v, k))
 	}
 	return ret
-}
-
-func main() {
-	fmt.Println(subdomainVisits([]string{"9001 discuss.leetcode.com"}))
 }
