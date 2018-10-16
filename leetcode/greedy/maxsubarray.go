@@ -1,8 +1,4 @@
-package main
-
-import (
-	"fmt"
-)
+package greedy
 
 func maxSubArray(nums []int) int {
 	max := nums[0]
@@ -15,8 +11,4 @@ func maxSubArray(nums []int) int {
 		}
 	}
 	return max
-}
-
-func main() {
-	fmt.Println(maxSubArray([]int{-2, 1, -3, 4, -1, 2, 1, -5, 4}))
 }
