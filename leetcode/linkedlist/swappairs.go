@@ -1,9 +1,4 @@
-package main
-
-type ListNode struct {
-	Val  int
-	Next *ListNode
-}
+package linkedlist
 
 func swapPairs(head *ListNode) *ListNode {
 	fakeHead := &ListNode{
@@ -18,8 +13,4 @@ func swapPairs(head *ListNode) *ListNode {
 		q = p.Next
 	}
 	return fakeHead.Next
-}
-
-func main() {
-
 }
