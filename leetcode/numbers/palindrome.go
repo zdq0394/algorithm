@@ -1,8 +1,4 @@
-package main
-
-import (
-	"fmt"
-)
+package numbers
 
 func isPalindrome(x int) bool {
 	y := 0
@@ -15,10 +11,8 @@ func isPalindrome(x int) bool {
 		}
 	}
 	if orignalX == y {
-		fmt.Println("Yes")
 		return true
 	}
-	fmt.Println("No")
 	return false
 }
 

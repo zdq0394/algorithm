@@ -1,8 +1,4 @@
-package main
-
-import (
-	"fmt"
-)
+package numbers
 
 func mySqrt(x int) int {
 	if x <= 1 {
@@ -20,8 +16,4 @@ func mySqrt(x int) int {
 		}
 	}
 	return right - 1
-}
-
-func main() {
-	fmt.Println(mySqrt(10000))
 }

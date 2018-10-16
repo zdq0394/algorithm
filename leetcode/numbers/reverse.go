@@ -1,7 +1,6 @@
-package main
+package numbers
 
 import (
-	"fmt"
 	"math"
 )
 
@@ -61,9 +60,4 @@ func reverse2(x int) int {
 		x = x / 10
 	}
 	return y
-}
-
-func main() {
-	ret := reverse2(1456789)
-	fmt.Println(ret)
 }
