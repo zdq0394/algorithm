@@ -1,6 +1,4 @@
-package main
-
-import "fmt"
+package arrays
 
 func twoSum1(nums []int, target int) []int {
 	for i, n := range nums {
@@ -18,16 +16,9 @@ func twoSum2(nums []int, target int) []int {
 	for i, v := range nums {
 		vv := target - v
 		if j, ok := m[vv]; ok && j != i {
-			return []int{j + 1, i + 1}
+			return []int{j, i}
 		}
 		m[v] = i
 	}
 	return []int{}
-}
-
-func main() {
-	target := 11
-	nums := []int{5, 8, 2, 6, 0, 7}
-	result := twoSum2(nums, target)
-	fmt.Println(result)
 }

@@ -1,20 +1,18 @@
-package main
+package arrays
 
-import "fmt"
-
-func twoSum(numbers []int, target int) []int {
+func twoSumSorted1(numbers []int, target int) []int {
 	m := make(map[int]int)
 	for i, v := range numbers {
 		vv := target - v
 		if j, ok := m[vv]; ok && j != i {
-			return []int{j + 1, i + 1}
+			return []int{j, i}
 		}
 		m[v] = i
 	}
 	return []int{}
 }
 
-func twoSum2(numbers []int, target int) []int {
+func twoSumSorted2(numbers []int, target int) []int {
 	min := 0
 	max := len(numbers) - 1
 	for min < max {
@@ -28,11 +26,4 @@ func twoSum2(numbers []int, target int) []int {
 		}
 	}
 	return []int{}
-}
-
-func main() {
-	target := 11
-	nums := []int{5, 8, 2, 6, 0, 7}
-	result := twoSum(nums, target)
-	fmt.Println(result)
 }
