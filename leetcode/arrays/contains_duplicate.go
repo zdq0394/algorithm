@@ -1,6 +1,4 @@
-package main
-
-import "fmt"
+package arrays
 
 func containsDuplicate(nums []int) bool {
 	if nums == nil || len(nums) < 2 {
@@ -10,9 +8,9 @@ func containsDuplicate(nums []int) bool {
 	for _, v := range nums {
 		if _, ok := h[v]; ok {
 			return true
-		} else {
-			h[v] = true
 		}
+		h[v] = true
+
 	}
 	return false
 }
@@ -33,10 +31,4 @@ func containsNearbyDuplicate(nums []int, k int) bool {
 		}
 	}
 	return false
-}
-
-func main() {
-	nums := []int{1, 2, 3, 5, 4, 3}
-	fmt.Println(containsDuplicate(nums))
-	fmt.Println(containsNearbyDuplicate(nums, 4))
 }
