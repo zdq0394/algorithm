@@ -21,8 +21,10 @@ func (h *minHeap) AddElement(e int) {
 	for j > 0 {
 		if h.Array[j] < h.Array[h.parentIndex(j)] {
 			h.Array[j], h.Array[h.parentIndex(j)] = h.Array[h.parentIndex(j)], h.Array[j]
+			j = h.parentIndex(j)
+		} else {
+			break
 		}
-		j = h.parentIndex(j)
 	}
 }
 
@@ -32,7 +34,8 @@ func (h *minHeap) RemoveElement() error {
 	}
 	h.Array[0] = h.Array[h.Capacity-1]
 	h.Capacity--
-	for i := 0; h.leftIndex(i) < h.Capacity; {
+	i := 0
+	for h.leftIndex(i) < h.Capacity {
 		min := h.minIndexInTripe(i)
 		if i != min {
 			h.Array[i], h.Array[min] = h.Array[min], h.Array[i]
