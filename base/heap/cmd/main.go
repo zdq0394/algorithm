@@ -5,7 +5,7 @@ import (
 )
 
 func t1() {
-	h := heap.NewEmptyMinHeap()
+	h := heap.NewEmptyMaxHeap()
 	h.AddElement(4)
 	h.AddElement(5)
 	h.AddElement(6)
