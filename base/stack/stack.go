@@ -13,4 +13,5 @@ type Stack interface {
 	Pop() (int, error)
 	Peek() (int, error)
 	Length() int
+	Empty() bool
 }

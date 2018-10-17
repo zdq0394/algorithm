@@ -37,3 +37,7 @@ func (s *stackArrayImpl) Peek() (int, error) {
 func (s *stackArrayImpl) Length() int {
 	return s.LastElementIndex + 1
 }
+
+func (s *stackArrayImpl) Empty() bool {
+	return s.Length() == 0
+}
