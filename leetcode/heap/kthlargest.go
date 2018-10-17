@@ -1,4 +1,4 @@
-package main
+package heap
 
 type KthLargest struct {
 	Capacity int // size
@@ -67,15 +67,4 @@ func (h *KthLargest) minIndexInTripe(i int) int {
 		ret = r
 	}
 	return ret
-}
-
-func main() {
-	k := 3
-	arr := []int{4, 5, 8, 2}
-	kthLargest := Constructor(k, arr)
-	kthLargest.Add(3)  // returns 4
-	kthLargest.Add(5)  // returns 5
-	kthLargest.Add(10) // returns 5
-	kthLargest.Add(9)  // returns 8
-	kthLargest.Add(4)  // returns 8
 }
