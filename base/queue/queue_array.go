@@ -30,16 +30,13 @@ func (q *QueueArrayImpl) Length() int {
 	return len(q.Array)
 }
 
-func (q *QueueArrayImpl) Head() (int, error) {
+func (q *QueueArrayImpl) Peek() (int, error) {
 	if len(q.Array) == 0 {
 		return 0, QueueEmptyError
 	}
 	return q.Array[0], nil
 }
 
-func (q *QueueArrayImpl) Tail() (int, error) {
-	if len(q.Array) == 0 {
-		return 0, QueueEmptyError
-	}
-	return q.Array[len(q.Array)-1], nil
+func (q *QueueArrayImpl) Empty() bool {
+	return q.Length() == 0
 }

@@ -12,6 +12,6 @@ type Queue interface {
 	Add(e int)
 	Remove() error
 	Length() int
-	Head() (int, error)
-	Tail() (int, error)
+	Peek() (int, error)
+	Empty() bool
 }

@@ -13,14 +13,10 @@ func main() {
 	q.Add(3)
 	var v int
 	var e error
-	v, e = q.Head()
-	fmt.Println(v, e)
-	v, e = q.Tail()
+	v, e = q.Peek()
 	fmt.Println(v, e)
 	q.Remove()
-	v, e = q.Head()
-	fmt.Println(v, e)
-	v, e = q.Tail()
+	v, e = q.Peek()
 	fmt.Println(v, e)
 	fmt.Println("Length:", q.Length())
 }
