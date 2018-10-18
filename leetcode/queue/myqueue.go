@@ -63,7 +63,7 @@ type MyQueue struct {
 }
 
 /** Initialize your data structure here. */
-func Constructor() MyQueue {
+func Constructor1() MyQueue {
 	return MyQueue{
 		inStack:  NewStack(),
 		outStack: NewStack(),
