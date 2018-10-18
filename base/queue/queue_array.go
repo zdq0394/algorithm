@@ -20,10 +20,6 @@ func (q *QueueArrayImpl) Remove() error {
 	if len(q.Array) == 0 {
 		return QueueEmptyError
 	}
-	if len(q.Array) == 1 {
-		q.Array = []int{}
-		return nil
-	}
 	q.Array = q.Array[1:]
 	return nil
 }
