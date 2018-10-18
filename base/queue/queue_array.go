@@ -4,6 +4,8 @@ type QueueArrayImpl struct {
 	Array []int
 }
 
+var _ Queue = &QueueArrayImpl{}
+
 func NewQueue() Queue {
 	return &QueueArrayImpl{
 		Array: []int{},
