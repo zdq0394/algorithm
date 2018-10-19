@@ -22,3 +22,19 @@ func FindPathOf(root *TreeNode, k int) []*TreeNode {
 	}
 	return []*TreeNode{}
 }
+
+func LowestCommonAncester(root *TreeNode, p, q *TreeNode) *TreeNode {
+	if root == nil {
+		return nil
+	}
+	for root != nil {
+		if p.Val > root.Val && q.Val > root.Val {
+			root = root.Right
+		} else if p.Val < root.Val && q.Val < root.Val {
+			root = root.Left
+		} else {
+			return root
+		}
+	}
+	return nil
+}
