@@ -76,3 +76,26 @@ func LevelOrder(root *TreeNode) [][]int {
 	}
 	return ret
 }
+
+func tiltSum(node *TreeNode, value *int) int {
+	if node == nil {
+		return 0
+	}
+	left := tiltSum(node.Left, value)
+	right := tiltSum(node.Right, value)
+	delta := left - right
+	if delta < 0 {
+		delta = right - left
+	}
+	*value += delta
+	return node.Val + left + right
+}
+
+func Tilt(root *TreeNode) int {
+	if root == nil {
+		return 0
+	}
+	var i int
+	tiltSum(root, &i)
+	return i
+}
