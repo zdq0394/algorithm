@@ -1,15 +1,6 @@
-package main
+package tree
 
-import (
-	"container/list"
-	"fmt"
-)
-
-type TreeNode struct {
-	Val   int
-	Left  *TreeNode
-	Right *TreeNode
-}
+import "container/list"
 
 func levelOrderBottom(root *TreeNode) [][]int {
 	if root == nil {
@@ -46,13 +37,4 @@ func levelOrderBottom(root *TreeNode) [][]int {
 		}
 	}
 	return result
-}
-
-func main() {
-	node5 := &TreeNode{5, nil, nil}
-	node4 := &TreeNode{4, nil, nil}
-	node3 := &TreeNode{3, nil, nil}
-	node2 := &TreeNode{2, node4, node5}
-	root := &TreeNode{1, node2, node3}
-	fmt.Println(levelOrderBottom(root))
 }

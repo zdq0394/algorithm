@@ -1,12 +1,6 @@
-package main
+package tree
 
 import "fmt"
-
-type TreeNode struct {
-	Val   int
-	Left  *TreeNode
-	Right *TreeNode
-}
 
 type pair struct {
 	node *TreeNode
@@ -37,8 +31,4 @@ func binaryTreePaths(root *TreeNode) []string {
 		}
 	}
 	return result
-}
-
-func main() {
-
 }

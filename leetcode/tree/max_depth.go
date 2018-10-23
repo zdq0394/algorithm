@@ -1,12 +1,4 @@
-package main
-
-import "fmt"
-
-type TreeNode struct {
-	Val   int
-	Left  *TreeNode
-	Right *TreeNode
-}
+package tree
 
 func maxDepth(root *TreeNode) int {
 	if root == nil {
@@ -49,8 +41,4 @@ func maxDepthIter(root *TreeNode) int {
 		}
 	}
 	return maxDepth
-}
-
-func main() {
-	fmt.Println("hello")
 }

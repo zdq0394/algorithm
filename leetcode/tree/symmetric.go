@@ -1,12 +1,4 @@
-package main
-
-import "fmt"
-
-type TreeNode struct {
-	Val   int
-	Left  *TreeNode
-	Right *TreeNode
-}
+package tree
 
 func isMirror(left, right *TreeNode) bool {
 	if left == nil && right == nil {
@@ -32,8 +24,4 @@ func isSymmetric(root *TreeNode) bool {
 		return false
 	}
 	return isMirror(root.Left, root.Right)
-}
-
-func main() {
-	fmt.Println("Hello World")
 }

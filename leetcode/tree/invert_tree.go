@@ -1,10 +1,4 @@
-package main
-
-type TreeNode struct {
-	Val   int
-	Left  *TreeNode
-	Right *TreeNode
-}
+package tree
 
 func invertTree(root *TreeNode) *TreeNode {
 	if root == nil {
@@ -15,8 +9,4 @@ func invertTree(root *TreeNode) *TreeNode {
 	}
 	root.Left, root.Right = invertTree(root.Right), invertTree(root.Left)
 	return root
-}
-
-func main() {
-
 }
