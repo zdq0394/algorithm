@@ -1,4 +1,4 @@
-package main
+package tree
 
 import (
 	"container/list"
@@ -10,7 +10,7 @@ type TreeNode struct {
 	Right *TreeNode
 }
 
-type pair struct {
+type mypair struct {
 	node *TreeNode
 	val  int
 }
@@ -33,18 +33,18 @@ func hasPathSum(root *TreeNode, sum int) bool {
 	}
 
 	stack := list.New()
-	stack.PushBack(pair{root, root.Val})
+	stack.PushBack(mypair{root, root.Val})
 	for stack.Len() != 0 {
 		e := stack.Back()
 		stack.Remove(e)
-		n := e.Value.(pair)
+		n := e.Value.(mypair)
 		if n.node.Left != nil {
 			if isLeaf(n.node.Left) {
 				if n.node.Left.Val+n.val == sum {
 					return true
 				}
 			} else {
-				stack.PushBack(pair{n.node.Left, n.node.Left.Val + n.val})
+				stack.PushBack(mypair{n.node.Left, n.node.Left.Val + n.val})
 			}
 		}
 		if n.node.Right != nil {
@@ -53,7 +53,7 @@ func hasPathSum(root *TreeNode, sum int) bool {
 					return true
 				}
 			} else {
-				stack.PushBack(pair{n.node.Right, n.node.Right.Val + n.val})
+				stack.PushBack(mypair{n.node.Right, n.node.Right.Val + n.val})
 			}
 		}
 	}
