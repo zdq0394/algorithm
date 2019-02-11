@@ -1,5 +1,9 @@
 package lru
 
+import (
+	"github.com/zdq0394/algorithm/others/cache"
+)
+
 type Node struct {
 	key   int
 	value int
@@ -13,6 +17,8 @@ type LRUCache struct {
 	tail *Node
 	data map[int]*Node
 }
+
+var _ cache.Cache = &LRUCache{}
 
 func Constructor(capacity int) LRUCache {
 	return LRUCache{
