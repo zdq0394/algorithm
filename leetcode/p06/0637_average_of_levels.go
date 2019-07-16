@@ -1,4 +1,4 @@
-package tree
+package p06
 
 func averageOfLevels(root *TreeNode) []float64 {
 	ret := []float64{}
