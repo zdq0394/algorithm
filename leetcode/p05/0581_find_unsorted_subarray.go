@@ -1,4 +1,4 @@
-package leetcode
+package p05
 
 func findUnsortedSubarray(nums []int) int {
 	if nums == nil || len(nums) == 0 || len(nums) == 1 {

@@ -1,4 +1,4 @@
-package leetcode
+package p09
 
 func sortedSquares(A []int) []int {
 	if A == nil || len(A) == 0 {

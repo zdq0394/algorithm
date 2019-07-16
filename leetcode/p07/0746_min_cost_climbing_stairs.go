@@ -1,4 +1,4 @@
-package leetcode
+package p07
 
 func minCostClimbingStairs(cost []int) int {
 	a := cost[0]

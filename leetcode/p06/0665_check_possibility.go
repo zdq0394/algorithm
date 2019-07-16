@@ -1,4 +1,4 @@
-package leetcode
+package p06
 
 func checkPossibility(nums []int) bool {
 	i := 0

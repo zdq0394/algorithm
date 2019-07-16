@@ -1,4 +1,4 @@
-package leetcode
+package p07
 
 func isToeplitzMatrix(matrix [][]int) bool {
 	if matrix == nil || len(matrix) == 0 || len(matrix[0]) == 0 {

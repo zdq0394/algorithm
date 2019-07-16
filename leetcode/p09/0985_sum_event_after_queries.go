@@ -1,4 +1,4 @@
-package leetcode
+package p09
 
 func sumEvenAfterQueries(A []int, queries [][]int) []int {
 	sum := 0

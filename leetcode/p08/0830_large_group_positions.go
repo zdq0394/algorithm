@@ -1,4 +1,4 @@
-package leetcode
+package p08
 
 func largeGroupPositions(S string) [][]int {
 	ret := make([][]int, 0)

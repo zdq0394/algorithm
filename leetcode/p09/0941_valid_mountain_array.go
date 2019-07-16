@@ -1,4 +1,4 @@
-package leetcode
+package p09
 
 func validMountainArray(A []int) bool {
 	if A == nil {

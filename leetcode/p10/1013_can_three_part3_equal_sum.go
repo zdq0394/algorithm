@@ -1,4 +1,4 @@
-package leetcode
+package p10
 
 func canThreePartsEqualSum(A []int) bool {
 	sum := 0

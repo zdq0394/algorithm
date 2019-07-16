@@ -1,4 +1,4 @@
-package leetcode
+package p10
 
 func numPairsDivisibleBy60(time []int) int {
 	if time == nil || len(time) == 0 {

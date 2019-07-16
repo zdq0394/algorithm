@@ -1,4 +1,4 @@
-package leetcode
+package p08
 
 func transpose(A [][]int) [][]int {
 	if A == nil || len(A) == 0 || len(A[0]) == 0 {

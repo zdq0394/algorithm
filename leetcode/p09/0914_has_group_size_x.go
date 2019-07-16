@@ -1,4 +1,4 @@
-package leetcode
+package p09
 
 func hasGroupsSizeX(deck []int) bool {
 	h := map[int]int{}

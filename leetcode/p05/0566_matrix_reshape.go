@@ -1,4 +1,4 @@
-package leetcode
+package p05
 
 func matrixReshape(nums [][]int, r int, c int) [][]int {
 	if nums == nil || len(nums) == 0 || len(nums[0]) == 0 {

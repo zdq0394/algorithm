@@ -1,4 +1,4 @@
-package leetcode
+package p09
 
 func sortArrayByParityII(A []int) []int {
 	i, j := 0, 1
